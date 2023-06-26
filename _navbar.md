@@ -1,3 +1,5 @@
+- [读书小记](/read/README.md)
+
 - [博物拾遗](/museum/README.md)
 
 - 理性之光
