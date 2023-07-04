@@ -2,7 +2,7 @@
 
 - [博物拾遗](/museum/README.md)
 
-- 理性之光
+- 科学技术
   - [环境配置&编程语言](/science/envlan/README.md)
   
   - [数学](/science/math/README.md)
