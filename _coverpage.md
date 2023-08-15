@@ -2,7 +2,7 @@
 
 # Maples’ blog
 
-> “相信奇迹的人本身就和奇迹一样了不起。”
+<span id="jinrishici-sentence">正在加载今日诗词....</span>
 
 
 
