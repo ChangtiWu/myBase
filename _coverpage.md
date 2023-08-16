@@ -2,7 +2,10 @@
 
 # Maples’ blog
 
-<span id="jinrishici-sentence">正在加载今日诗词....</span>
+<!-- 今日诗词 -->
+
+<div id="poem_sentence"></div>
+<div id="poem_info"></div>
 
 
 

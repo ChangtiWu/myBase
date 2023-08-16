@@ -9,11 +9,24 @@
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="vue.css">
-
+  
+  <style>
+	#poem_sentence{
+		font-family: "楷体";
+		font-size: 20px;
+		margin-bottom: 15px;
+	}
+	#poem_info{
+		font-family: "楷体";
+	}
   </style>
 </head>
 <body>
   <div id="app">正在加载中...</div>
+  <!-- 今日诗词 -->
+  <div id="poem_sentence"></div>
+  <div id="poem_info"></div>
+  <!-- js前面出错会影响后面运行 -->
   <script>
     window.$docsify = {
 		// 项目名称
@@ -81,6 +94,7 @@
 		  }]
     }
   </script>
+  
   <!-- Docsify v4 -->
   <script src="docsify@4.js"></script>
   <!-- search -->
@@ -94,14 +108,22 @@
   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
   <!-- 图片缩放-->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+  
   <!-- PDF插件 -->
   <!-- PDFObject.js is a required dependency of this plugin -->
   <script src="//cdnjs.cloudflare.com/ajax/libs/pdfobject/2.1.1/pdfobject.min.js"></script> 
-  <!-- This is the source code of the pdf embed plugin -->
-  <script src="path-to-file/docsify-pdf-embed.js"></script>
   <!-- or use this if you are not hosting the file yourself -->
   <script src="//unpkg.com/docsify-pdf-embed-plugin/src/docsify-pdf-embed.js"></script>
+  
   <!-- 今日诗词 -->
   <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    jinrishici.load(function(result) {
+      var sentence = document.querySelector("#poem_sentence")
+      var info = document.querySelector("#poem_info")
+      sentence.innerHTML = result.data.content
+      info.innerHTML = '【' + result.data.origin.dynasty + '】' + result.data.origin.author + '《' + result.data.origin.title + '》'
+    });
+  </script>
 </body>
 </html>
