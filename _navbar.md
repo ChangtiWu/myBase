@@ -19,4 +19,4 @@
   
   - [安全多方计算](/scitech/MPC/README.md)
   
-  - [差分隐私](scitech/DP/README.md)
+  - [差分隐私](/scitech/DP/README.md)
