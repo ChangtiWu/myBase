@@ -62,7 +62,20 @@
 			depth: 3,
 			hideOtherSidebarContent: false,
 			namespace: 'Docsify-Guide',
-		}
+		},
+		// 回到顶部按钮
+		scrollToTop: {
+			auto: true,
+			text: 'Top',
+			right: 15,
+			bottom: 15,
+			offset: 500
+		},
+		//最后更新时间
+		timeUpdater: {
+			text: "<div align='left' width='200px' style='color:gray;font-size:16px'><i>Posted @ {docsify-updated}</i></div>",
+			formatUpdated: "{YYYY}-{MM}-{DD} {HH}:{mm}",
+		},
     }
   </script>
   
@@ -77,12 +90,15 @@
   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
   <!-- 图片缩放-->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
-  
+  <!-- 回到顶部按钮 -->
+  <script src="//unpkg.com/docsify-scroll-to-top/dist/docsify-scroll-to-top.min.js"></script>
   <!-- PDF插件 -->
   <!-- PDFObject.js is a required dependency of this plugin -->
   <script src="//cdnjs.cloudflare.com/ajax/libs/pdfobject/2.1.1/pdfobject.min.js"></script> 
   <!-- or use this if you are not hosting the file yourself -->
   <script src="//unpkg.com/docsify-pdf-embed-plugin/src/docsify-pdf-embed.js"></script>
+  <!-- 最后更新时间 -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-updated/src/time-updater.min.js"></script>
   
   <!-- 今日诗词 -->
   <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
