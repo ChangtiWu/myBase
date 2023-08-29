@@ -1,3 +1,5 @@
+# Python配置
+
 >环境变量中的用户变量与系统变量的区别：https://zhuanlan.zhihu.com/p/93719752
 >
 >1. 环境变量没有区分大小写，例如path跟PATH是一样的。

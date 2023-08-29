@@ -1,3 +1,5 @@
+# MASCOT协议
+
 # MPC
 
 安全多方计算（Secure Multi-party Computation, MPC）是隐私计算技术中的一种，它可以让一组用户以他们的隐私数据为输入，共同计算一个函数，并且所有用户只能得到这个函数的输出，无法得到其他的任何信息。
@@ -8,7 +10,7 @@
 
 MASCOT（Faster Malicious Arithmetic Secure Computation with Oblivious Transfer）安全多方计算协议，即使用不经意传输实现的快速抗恶意算数安全计算。
 
-**威胁模型**
+## 威胁模型
 
 大多数静态恶意参与方。
 
