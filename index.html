@@ -63,6 +63,22 @@
 			hideOtherSidebarContent: false,
 			namespace: 'Docsify-Guide',
 		},
+		plugins: [
+			  function(hook, vm) {
+				hook.beforeEach(function (html) {
+				  //适配Markdown的====高亮语法
+				  let res = html.match(/==(.+?)==/g);
+				  if(res){
+					for (var i = 0; i < res.length; i++) {
+					  html = html.replace(res[i],`<mark>`+res[i].replace(/==/g,"")+`</mark>`);
+					}
+				  }
+				//将更新时间加到文档的最顶部
+					return '> Last Modified {docsify-updated}'
+						  + '\n----\n'
+						  + html;
+				})
+		}],
 		// 回到顶部按钮
 		scrollToTop: {
 			auto: true,
@@ -73,7 +89,7 @@
 		},
 		//最后更新时间
 		timeUpdater: {
-			text: "<div align='left' width='200px' style='color:gray;font-size:16px'><i>Posted @ {docsify-updated}</i></div>",
+			text: "<div align='left' width='200px' style='color:gray;font-size:16px;padding-top:30px;'><i>Posted @ {docsify-updated}</i></div>",
 			formatUpdated: "{YYYY}-{MM}-{DD} {HH}:{mm}",
 		},
     }
@@ -109,6 +125,11 @@
       sentence.innerHTML = result.data.content
       info.innerHTML = '【' + result.data.origin.dynasty + '】' + result.data.origin.author + '《' + result.data.origin.title + '》'
     });
+  </script>
+  
+  <script type="text/javascript">
+	let node = document.createElement('hr');
+    document.getElementById('main').insertBefore(node, document.getElementById('main').children[1]);
   </script>
 </body>
 </html>
