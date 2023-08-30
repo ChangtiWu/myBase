@@ -23,6 +23,7 @@
 </head>
 <body>
   <div id="app">正在加载中...</div>
+
   <!-- js前面出错会影响后面运行 -->
   <script>
     window.$docsify = {
@@ -73,28 +74,17 @@
 					  html = html.replace(res[i],`<mark>`+res[i].replace(/==/g,"")+`</mark>`);
 					}
 				  }
-				//将更新时间加到文档的最顶部
-					return '> Last Modified {docsify-updated}'
-						  + '\n----\n'
-						  + html;
 				})
 		}],
-		// 回到顶部按钮
-		scrollToTop: {
-			auto: true,
-			text: 'Top',
-			right: 15,
-			bottom: 15,
-			offset: 500
-		},
-		//最后更新时间
+		//更新时间
 		timeUpdater: {
-			text: "<div align='left' width='200px' style='color:gray;font-size:16px;padding-top:30px;'><i>Posted @ {docsify-updated}</i></div>",
+			text: ">Last updated: {docsify-updated}",
 			formatUpdated: "{YYYY}-{MM}-{DD} {HH}:{mm}",
-		},
+			whereToPlace: "bottom",  // "top" or "bottom", default to "bottom"
+		  },
+	
     }
   </script>
-  
   <!-- Docsify v4 -->
   <script src="docsify@4.js"></script>
   <!-- search -->
@@ -107,7 +97,7 @@
   <!-- 图片缩放-->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
   <!-- 回到顶部按钮 -->
-  <script src="//unpkg.com/docsify-scroll-to-top/dist/docsify-scroll-to-top.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/Sumsung524/docsify-backTop/dist/docsify-backTop.min.js"></script>
   <!-- PDF插件 -->
   <!-- PDFObject.js is a required dependency of this plugin -->
   <script src="//cdnjs.cloudflare.com/ajax/libs/pdfobject/2.1.1/pdfobject.min.js"></script> 
@@ -115,21 +105,18 @@
   <script src="//unpkg.com/docsify-pdf-embed-plugin/src/docsify-pdf-embed.js"></script>
   <!-- 最后更新时间 -->
   <script src="https://cdn.jsdelivr.net/npm/docsify-updated/src/time-updater.min.js"></script>
-  
+
   <!-- 今日诗词 -->
   <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
   <script type="text/javascript">
     jinrishici.load(function(result) {
       var sentence = document.querySelector("#poem_sentence")
       var info = document.querySelector("#poem_info")
-      sentence.innerHTML = result.data.content
-      info.innerHTML = '【' + result.data.origin.dynasty + '】' + result.data.origin.author + '《' + result.data.origin.title + '》'
-    });
-  </script>
-  
-  <script type="text/javascript">
-	let node = document.createElement('hr');
-    document.getElementById('main').insertBefore(node, document.getElementById('main').children[1]);
+	  if(sentence){
+		sentence.innerHTML = result.data.content
+		info.innerHTML = '【' + result.data.origin.dynasty + '】' + result.data.origin.author + '《' + result.data.origin.title + '》'
+	  }
+	});
   </script>
 </body>
 </html>
