@@ -1,5 +1,4 @@
 - [读书小记](/read/README.md)
-- [博物拾遗](/museum/README.md)
 - 科学技术
   - [环境配置&编程语言](/scitech/envlan/README.md)
   - [数学](/scitech/math/README.md)
