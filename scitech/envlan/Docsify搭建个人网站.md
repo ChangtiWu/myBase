@@ -101,6 +101,14 @@ git init
 >
 > - https://www.liaoxuefeng.com/wiki/896043488029600/898732864121440
 
+# 插件
+
+https://docsify.js.org/#/zh-cn/plugins
+
+# MD编写注意
+
+- docsify侧边栏目录默认不显示第一个一级标题，所以在编写MD时需要加上题目作为一级标题。
+
 # 兼容问题
 
 ## letax数学公式显示
@@ -129,10 +137,7 @@ window.$docsify = {
 				  html = html.replace(res[i],`<mark>`+res[i].replace(/==/g,"")+`</mark>`);
 				}
 			  }
-				//将更新时间加到文档的最顶部
-				return '> Last Modified {docsify-updated}'
-					  + '\n----\n'
-					  + html;
+              return html;
 			})
 	}]
 }
