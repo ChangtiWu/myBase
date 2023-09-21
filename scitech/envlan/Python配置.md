@@ -50,7 +50,7 @@ conda list
 
 更新包，跟安装一样的命令，会自动更新。
 
-### 1.2.1 虚拟环境
+### 虚拟环境
 
 查看创建的环境
 
@@ -92,7 +92,7 @@ conda deactivate
 conda remove -n  需要删除的环境名 --all
 ```
 
-### 1.2.2 换源
+### 换源
 
 显示所有conda的channel ：
 
@@ -129,7 +129,31 @@ conda config --set show_channel_urls yes
 conda config --remove channels http://mirrors.aliyun.com/pypi/simple/
 ```
 
-### 1.2.3 常见问题
+### 安装、删除包
+
+conda 安装命令：
+
+```bash
+conda install XXX
+```
+
+卸载命令：
+
+```bash
+conda uninstall XXX
+```
+
+这个命令时不时会出一些问题，卸载失败。这个时候，就可以尝试以下两种卸载命令：
+
+```bash
+conda remove XXX
+pip uninstall  XXX
+```
+
+注意：
+安装的时候是用pip 安装， 卸载的时候也需要pip uninstall
+
+### 常见问题
 
 #### Sublime Text 4的使用
 
