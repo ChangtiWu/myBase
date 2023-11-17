@@ -4,3 +4,5 @@
   * [优化方法](/scitech/ML/优化方法.md)
   * [聚类](/scitech/ML/聚类.md)
   * [贝叶斯学习](/scitech/ML/贝叶斯学习.md)
+  * [梯度量化：QSGD](梯度量化：QSGD.md)
+  * [Pytorch对模型操作](Pytorch对模型操作.md)
