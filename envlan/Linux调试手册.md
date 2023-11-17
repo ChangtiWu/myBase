@@ -9,7 +9,7 @@
 指令：
 
 ```bash
-$ free [-bkmotV][-s <间隔秒数>]
+free [-bkmotV][-s <间隔秒数>]
 ```
 
 参数：
@@ -43,13 +43,13 @@ $ free [-bkmotV][-s <间隔秒数>]
 清理缓存前先用sync命令：
 
 ```bash
-$ sync
+sync
 ```
 
 释放缓存指令：
 
 ```bash
-$ echo 3 > /proc/sys/vm/drop_caches
+echo 3 > /proc/sys/vm/drop_caches
 ```
 
 0 – 不释放
@@ -60,7 +60,7 @@ $ echo 3 > /proc/sys/vm/drop_caches
 **如果权限不够：**
 
 ```bash
-$ sudo sh -c "echo 3 > /proc/sys/vm/drop_caches"
+sudo sh -c "echo 3 > /proc/sys/vm/drop_caches"
 ```
 
 
@@ -74,7 +74,7 @@ $ sudo sh -c "echo 3 > /proc/sys/vm/drop_caches"
 ## 查看显存占用情况
 
 ```bash
-$ fuser -v /dev/nvidia* 
+fuser -v /dev/nvidia* 
 ```
 
 可发现进程占用情况类似如下：
@@ -101,6 +101,6 @@ $ fuser -v /dev/nvidia*
 根据对应的进程号杀死：
 
 ```bash
-$ kill -9 8542
+kill -9 8542
 ```
 
