@@ -9,4 +9,4 @@
   - [差分隐私](/scitech/DP/README.md)
   - [其他](/scitech/other/README.md)
 
-- [环境配置&编程语言](/envlan/README.md)
+- [环境配置&实验经验](/envlan/README.md)
