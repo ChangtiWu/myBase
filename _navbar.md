@@ -1,5 +1,5 @@
-- [其他](/other/README.md)
-- 科学技术
+- [Other](/other/README.md)
+- SciTech
   - [数学](/scitech/math/README.md)
   - [数据科学](/scitech/datasci/README.md)
   - [机器学习](/scitech/ML/README.md)
@@ -9,4 +9,4 @@
   - [差分隐私](/scitech/DP/README.md)
   - [其他](/scitech/other/README.md)
 
-- [环境配置&实验经验](/envlan/README.md)
+- [LabLog](/lablog/README.md)
