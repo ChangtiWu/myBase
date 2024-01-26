@@ -4,3 +4,5 @@
   * [秘密分享](秘密分享.md)
   * [混淆电路](GC.md)
   * [GMW](GMW.md)
+  * [BGW](BGW.md)
+  * [BMR](BMR.md)

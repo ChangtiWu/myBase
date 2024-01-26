@@ -47,11 +47,11 @@ Alice用$\langle x \rangle_0, \langle y \rangle_0$作为电路输入；Bob用$\l
 > 在与门的计算中，
 > $$
 > \begin{aligned}
-> z &=(\langle x\rangle_0\oplus \langle x\rangle_1) \and (\langle y\rangle_0\oplus \langle y\rangle_1) \\
-> &= (\langle x\rangle_0 \and \langle y\rangle_0) \oplus (\langle x\rangle_0 \and \langle y\rangle_1) \oplus (\langle x\rangle_1 \and \langle y\rangle_0)\oplus (\langle x\rangle_1 \and \langle y\rangle_1)
+> z &=(\langle x\rangle_0\oplus \langle x\rangle_1) \land (\langle y\rangle_0\oplus \langle y\rangle_1) \\
+> &= (\langle x\rangle_0 \land \langle y\rangle_0) \oplus (\langle x\rangle_0 \land \langle y\rangle_1) \oplus (\langle x\rangle_1 \land \langle y\rangle_0)\oplus (\langle x\rangle_1 \land \langle y\rangle_1)
 > \end{aligned}
 > $$
-> 由于Alice不知道$\langle x\rangle_1, \langle y\rangle_1$，因此$\langle x\rangle_1 \and \langle y\rangle_0$和$\langle x\rangle_0 \and \langle y\rangle_1$可以采用Beaver三元组进行计算，最终Alice获得$\langle z\rangle_0 = (\langle x\rangle_0 \and \langle y\rangle_0) \oplus (\langle x\rangle_0 \and \langle y\rangle_1) \oplus (\langle x\rangle_1 \and \langle y\rangle_0)$，Bob获得$\langle z\rangle_1 = \langle x\rangle_1 \and \langle y\rangle_1$。
+> 由于Alice不知道$\langle x\rangle_1, \langle y\rangle_1$，因此$\langle x\rangle_1 \land \langle y\rangle_0$和$\langle x\rangle_0 \land \langle y\rangle_1$可以采用Beaver三元组进行计算，最终Alice获得$\langle z\rangle_0 = (\langle x\rangle_0 \land \langle y\rangle_0) \oplus (\langle x\rangle_0 \land \langle y\rangle_1) \oplus (\langle x\rangle_1 \land \langle y\rangle_0)$，Bob获得$\langle z\rangle_1 = \langle x\rangle_1 \land \langle y\rangle_1$。
 >
 > 因此，对于与门的计算，可以不用OT，用Beaver三元组也是一种办法。
 
@@ -69,19 +69,19 @@ $P_i$为其他参与方$P_j$随机生成$\langle x_i\rangle_j\in \{0,1\}$，则�
 $$
 \begin{aligned}
 z &= g(x_1,x_2) \\
-&= (\oplus_{k=1}^n \langle x_1\rangle_k) \and (\oplus_{k=1}^n \langle x_2\rangle_k) \\
-&= (\oplus_{i=1}^n (\langle x_1\rangle_i \and \langle x_2\rangle_j) )\oplus (\oplus_{i\neq j} (\langle x_1\rangle_i \and \langle x_2\rangle_j) )
+&= (\oplus_{k=1}^n \langle x_1\rangle_k) \land (\oplus_{k=1}^n \langle x_2\rangle_k) \\
+&= (\oplus_{i=1}^n (\langle x_1\rangle_i \land \langle x_2\rangle_j) )\oplus (\oplus_{i\neq j} (\langle x_1\rangle_i \land \langle x_2\rangle_j) )
 \end{aligned}
 $$
-其中，$i=j$时，$\langle x_1\rangle_i \and \langle x_2\rangle_j$可以由各参与方本地计算；$i\neq j$时，可以利用OT计算$\langle x_1\rangle_i \and \langle x_2\rangle_j$：
+其中，$i=j$时，$\langle x_1\rangle_i \land \langle x_2\rangle_j$可以由各参与方本地计算；$i\neq j$时，可以利用OT计算$\langle x_1\rangle_i \land \langle x_2\rangle_j$：
 
-1. 与之前提到过的一样，每个参与方$P_i$随机生成$c_{i,j}\in \{0,1\}$，并枚举出$c_{i,j} \oplus (\langle x_1\rangle_i \and \langle x_2\rangle_j)$的所有情况（两种情况），与$P_j$做$OT^2_1$，最终$P_j$得到$c_{i,j} \oplus (\langle x_1\rangle_i \and \langle x_2\rangle_j)$。
-2. 对于一个参与方$P_i$可以得到$\oplus_{1\leq j\leq n, j\neq i} c_{i,j}$和$\oplus_{1\leq j\leq n, j\neq i} (c_{j,i} \oplus (\langle x_1\rangle_j \and \langle x_2\rangle_i))$。
+1. 与之前提到过的一样，每个参与方$P_i$随机生成$c_{i,j}\in \{0,1\}$，并枚举出$c_{i,j} \oplus (\langle x_1\rangle_i \land \langle x_2\rangle_j)$的所有情况（两种情况），与$P_j$做$OT^2_1$，最终$P_j$得到$c_{i,j} \oplus (\langle x_1\rangle_i \land \langle x_2\rangle_j)$。
+2. 对于一个参与方$P_i$可以得到$\oplus_{1\leq j\leq n, j\neq i} c_{i,j}$和$\oplus_{1\leq j\leq n, j\neq i} (c_{j,i} \oplus (\langle x_1\rangle_j \land \langle x_2\rangle_i))$。
 
 最后，每个参与方得到各自的关于$z$的布尔份额：
 $$
 \begin{aligned}
-\langle z\rangle_i &= (\langle x_1\rangle_i \and \langle x_2\rangle_i)\oplus (\oplus_{1\leq j\leq n, j\neq i} c_{i,j}) \oplus (\oplus_{1\leq j\leq n, j\neq i} (c_{j,i} \oplus (\langle x_1\rangle_j \and \langle x_2\rangle_i)))
+\langle z\rangle_i &= (\langle x_1\rangle_i \land \langle x_2\rangle_i)\oplus (\oplus_{1\leq j\leq n, j\neq i} c_{i,j}) \oplus (\oplus_{1\leq j\leq n, j\neq i} (c_{j,i} \oplus (\langle x_1\rangle_j \land \langle x_2\rangle_i)))
 \end{aligned}
 $$
 
