@@ -11,7 +11,7 @@
 
 ```
 \usepackage{ulem}
-\
+\sout{}
 ```
 
 
