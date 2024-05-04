@@ -25,11 +25,19 @@ git pull origin 分支
 不能在本地直接删除！否则远程仓库后上原文件没有变化！应该在git bush中输入命令：
 
 ```cmd
-git mv 旧文件名 新文件名
+git rm 文件名
 git add 新文件名
 git commit –m "rename"
 git push origin 分支
 ```
+
+若删除文件夹，第一行改成：
+
+```cmd
+git rm -r 文件夹名
+```
+
+删除文件夹时，文件夹不能为空，否则不能找到文件夹从而无法删除。
 
 ### 修改文件名称
 
