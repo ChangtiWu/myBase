@@ -5,7 +5,6 @@
   * [深度学习环境配置](深度学习环境配置.md)
   * [远程连接服务器](远程连接服务器.md)
   * [Python配置](Python配置.md)
-  * [Python日常高频写法](Python日常高频写法.md)
   * [Python导入模块](Python导入模块.md)
   * [latex使用笔记](latex使用笔记.md)
   * [实验笔记](实验笔记.md)
