@@ -1,4 +1,4 @@
-- [Other](/other/README.md)
+- [Others](/others/README.md)
 - SciTech
   - [数学](/scitech/math/README.md)
   - [数据科学](/scitech/datasci/README.md)
@@ -7,6 +7,6 @@
   - [密码学](/scitech/crypto/README.md)
   - [安全多方计算](/scitech/MPC/README.md)
   - [差分隐私](/scitech/DP/README.md)
-  - [其他](/scitech/other/README.md)
+  - [其他](/scitech/others/README.md)
 
 - [LabLog](/lablog/README.md)

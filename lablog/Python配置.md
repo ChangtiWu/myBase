@@ -176,6 +176,14 @@ Sublime Text 4的“Tools”——“Build System”——“New Build System”
 
 “cmd”字段里设置目标虚拟环境中的python解释器python.exe的路径，保存到默认地址，命名为`Python(ml).sublime-build`，可以自由命名，后缀一定要是`sublime-build`。
 
+**控制台输出中文乱码**
+
+点击Preferences->Browse Packages->User，找到自己之前为每个环境配置好的sublime-build文件，在花括号里添加：
+
+```python
+"env": {"PYTHONIOENCODING": "utf8"},
+```
+
 # 2 安装包
 
 ## Jupyter Notebook
