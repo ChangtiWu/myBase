@@ -16,9 +16,15 @@ git pull origin 分支
 
 ## Git本地仓库修改后同步到远程仓库
 
-### 添加文件
+### 添加文件&修改文件内容
 
-本地直接新建文件，正常add>commit>push即可。
+本地直接新建文件&修改文件内容，正常add>commit>push即可。
+
+```cmd
+git add 新文件名
+git commit –m "add"
+git push origin 分支
+```
 
 ### 删除文件
 
@@ -26,7 +32,6 @@ git pull origin 分支
 
 ```cmd
 git rm 文件名
-git add 新文件名
 git commit –m "delete"
 git push origin 分支
 ```
@@ -45,7 +50,6 @@ git rm -r 文件夹名
 
 ```cmd
 git mv 旧文件名 新文件名
-git add 新文件名
 git commit –m "rename"
 git push origin 分支
 ```
