@@ -27,7 +27,7 @@ git pull origin 分支
 ```cmd
 git rm 文件名
 git add 新文件名
-git commit –m "rename"
+git commit –m "delete"
 git push origin 分支
 ```
 
