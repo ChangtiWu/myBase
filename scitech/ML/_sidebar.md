@@ -6,3 +6,4 @@
   * [贝叶斯学习](/scitech/ML/贝叶斯学习.md)
   * [梯度量化：QSGD](梯度量化：QSGD.md)
   * [Pytorch对模型操作](Pytorch对模型操作.md)
+  * [模型微调](模型微调.md)
