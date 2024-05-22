@@ -2,10 +2,6 @@
 
 ## 基本操作
 
-
-
-
-
 **拉取远端最新仓库**
 
 ```cmd
@@ -14,7 +10,7 @@ git pull origin 分支
 
 
 
-## Git本地仓库修改后同步到远程仓库
+## 本地仓库修改后同步到远程仓库
 
 ### 添加文件&修改文件内容
 
@@ -60,3 +56,21 @@ git push origin 分支
 git mv --force 旧文件名 新文件名
 ```
 
+## 拉取远程仓库
+
+### 强制拉取并覆盖本地文件
+
+```cmd
+#需要将这些更新取回本地，这时就要用到git fetch命令
+git fetch --all
+#撤销本地、暂存区、版本库（用远程服务器的origin/master替换本地）
+git reset --hard origin/master
+#git pull 来从远程仓库拉取同步代码
+git pull origin master
+```
+
+
+
+> 参考资料：
+>
+> 1. https://juejin.cn/post/7029615515492433957
