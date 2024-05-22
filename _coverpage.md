@@ -1,4 +1,4 @@
-<img src="_coverpage.assets/maple.png" alt="maple" style="zoom:60%;" />
+<img src="_coverpage.assets/cover.png" alt="maple" style="zoom:60%;" />
 
 # Maples’ blog
 
