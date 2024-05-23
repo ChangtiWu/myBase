@@ -88,8 +88,28 @@ labelfont=rm,textfont=rm，表示修改字体为罗马字体。原本的sf为无
 
 
 
+## 算法流程图
+
+### 添加伪代码向右指向小三角形注释
+
+导入宏包：
+
+```latex
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\renewcommand{\algorithmiccomment}[1]{\hfill $\triangleright$ #1}
+```
+
+然后在伪代码中，我们在需要注释的伪代码的下面一行或后面，使用以下的代码进行注释：
+
+```latex
+\COMMENT{your comment content}
+\textcolor{blue}{\COMMENT{this is a comment}} #lan'se
+```
+
 
 
 > 参考资料：
 >
 > 1. https://blog.csdn.net/qq_43153628/article/details/126050272
+> 1. https://zhuanlan.zhihu.com/p/645999650
