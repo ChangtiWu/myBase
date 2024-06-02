@@ -104,7 +104,7 @@ labelfont=rm,textfont=rm，表示修改字体为罗马字体。原本的sf为无
 
 ```latex
 \COMMENT{your comment content}
-\textcolor{blue}{\COMMENT{this is a comment}} #lan'se
+\textcolor{blue}{\COMMENT{this is a comment}} #蓝色的注释
 ```
 
 
