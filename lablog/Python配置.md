@@ -131,10 +131,22 @@ conda config --remove channels http://mirrors.aliyun.com/pypi/simple/
 
 ### 安装、删除包
 
+查询包当前通道下可装的版本：
+
+```
+conda search XXX
+```
+
 conda 安装命令：
 
 ```bash
 conda install XXX
+```
+
+指定版本：
+
+```
+conda install XXX=1.2
 ```
 
 卸载命令：
@@ -244,3 +256,24 @@ conda install pandas
 conda install matplotlib
 conda install seaborn
 ```
+
+
+
+# 3 迁移Anaconda3
+
+导出需要的虚拟环境到environment.yml，查看当前anaconda版本，去官网找到同版本的安装包（避免版本不兼容，其实版本不同也行），在新位置重新安装同版本anaconda，-p 可以指定安装位置。 再将虚拟环境安回来。
+
+```cmd
+conda env export > environment.yml  #导出虚拟环境到environment.yml
+
+# 指定目录安装anaconda
+./Anaconda3-5.2.0-Linux-x86_64.sh -p /home/anaconda3/
+
+conda env create -f environment.yml  #导入  
+```
+
+
+
+> 参考文献
+>
+> - https://blog.csdn.net/weixin_33127753/article/details/104620211
