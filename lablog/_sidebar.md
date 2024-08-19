@@ -6,6 +6,8 @@
   * [远程连接服务器](远程连接服务器.md)
   * [Python配置](Python配置.md)
   * [Python导入模块](Python导入模块.md)
+  * [Python上机代码](Python上机代码.md)
+  * [C++上机代码](C++上机代码.md)
   * [latex使用笔记](latex使用笔记.md)
   * [实验笔记](实验笔记.md)
   * [实验笔记_作图](实验笔记_作图.md)
