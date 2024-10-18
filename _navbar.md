@@ -1,4 +1,4 @@
-- [Others](/others/README.md)
+- [其他](/others/README.md)
 - SciTech
   - [数学](/scitech/math/README.md)
   - [数据科学](/scitech/datasci/README.md)
