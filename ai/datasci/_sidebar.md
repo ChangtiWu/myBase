@@ -1,3 +1,3 @@
 * 数据科学
-  * [Pandas](/scitech/datasci/Pandas.md)
-  * [Python爬虫](/scitech/datasci/Python爬虫.md)
+  * [Pandas](Pandas.md)
+  * [Python爬虫](Python爬虫.md)
