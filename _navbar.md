@@ -1,12 +1,11 @@
 - [其他](/others/README.md)
-- SciTech
-  - [数学](/scitech/math/README.md)
-  - [数据科学](/scitech/datasci/README.md)
-  - [机器学习](/scitech/ML/README.md)
-  - [联邦学习](/scitech/FL/README.md)
-  - [密码学](/scitech/crypto/README.md)
-  - [安全多方计算](/scitech/MPC/README.md)
-  - [差分隐私](/scitech/DP/README.md)
-  - [其他](/scitech/others/README.md)
+- [数学&统计](/mathstat/README.md)
+- 人工智能
+  - [数据科学](/ai/datasci/README.md)
+  - [机器学习](/ai/ML/README.md)
+  - [联邦学习](/ai/FL/README.md)
+- 密码学
+  - [密码学](/crypto/crypto/README.md)
 
-- [LabLog](/lablog/README.md)
+  - [安全多方计算](/crypto/MPC/README.md)
+- [通用技术](/lablog/README.md)
