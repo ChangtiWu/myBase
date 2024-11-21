@@ -9,30 +9,34 @@
 \textcolor{color}{text}
 ```
 
+
+
 使用删除线、波浪线等：
 
 ```
 \usepackage{ulem}
-\sout{}
+\sout{}  删除线
+\uwave{}  波浪线
+\uline{}  下划线
+\uuline{}  双下划线
 ```
 
+下划线在算法流程图中可能不会自动换行，需要用soul宏包：`\usepackage{soul}`
+
 ```
-\usepackage{booktabs}
-\toprule
-\midrule
-\bottomrule
+\so{1.letterspacing}  字间空格
+\ul{2.underlining}  下划线
+\st{3.striking out}  删除线
+\hl{4.highlighting}  高亮
 ```
+
+
 
 打勾叉：
 
 ```
 \usepackage{bbding}
 ```
-
-- 字体族
-  - 罗马字体：笔画起始处有装饰`\textrm{}`
-  - 无衬线字体：笔画起始处无装饰`\textsf{}`
-  - 打字机字体：每个字符宽度相同，又称等宽字体`\texttt{}`
 
 ## 图片
 
@@ -174,6 +178,67 @@ Excel2LaTex下载地址：https://www.ctan.org/tex-archive/support/excel2latex/
 则可以将一根完整的横线分为三段，效果如下：
 
 ![在这里插入图片描述](latex使用笔记.assets/e55f97ac762032367bd44bc61b1747df.png)
+
+
+
+## 其他
+
+### 添加脚注
+
+正常在正文文本中直接在文本后面添加`\footnote{}`即可。但是在表格或者算法流程图中打`\footnote`是不显示的，需要宏包`\usepackage{threeparttable}`
+
+```
+\usepackage{threeparttable} % footnote in table
+
+1、在表格页面下方添加脚注：
+\begin{table}
+   \centering
+   \begin{tabular}{llll}
+   \hline
+   column 1 & column 2 & column 3\footnotemark[1] & column 4\footnotemark[2] \\
+   \hline
+   row 1 & data 1 & data 2 & data 3 \\
+   row 2 & data 1 & data 2 & data 3 \\
+   row 3 & data 1 & data 2 & data 3 \\
+   \hline
+   \end{tabular}
+   \caption{Table with footnotes at the bottom of the page}
+   \label{tab:test1}
+\end{table}
+\footnotetext[1]{table footnote 1}
+\footnotetext[2]{table footnote 2}
+
+2、在表格下方添加脚注：
+\begin{table}
+   \centering
+   \begin{threeparttable}[b]
+   \caption{Table with footnotes after the table}
+   \label{tab:test2}
+   \begin{tabular}{llll}
+   \hline
+   column 1 & column 2 & column 3\tnote{1} & column 4\tnote{2} \\
+   \hline
+   row 1 & data 1 & data 2 & data 3 \\
+   row 2 & data 1 & data 2 & data 3 \\
+   row 3 & data 1 & data 2 & data 3 \\
+   \hline
+   \end{tabular}
+   \begin{tablenotes}
+     \item[1] tablefootnote 1
+     \item[2] tablefootnote 2
+   \end{tablenotes}
+  \end{threeparttable}
+\end{table}
+```
+
+但是threeparttable包的脚注与原生脚注编号相互独立，需要手动调整一下编号：
+
+```
+\footnote[编号]{XXX}
+\footnotetext[编号]{table footnote 1}
+```
+
+
 
 
 
