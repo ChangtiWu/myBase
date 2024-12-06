@@ -240,6 +240,17 @@ Excel2LaTex下载地址：https://www.ctan.org/tex-archive/support/excel2latex/
 
 
 
+### htbp
+
+[htbp] 中的每个字母代表一个放置选项：
+
+h：代表“here”，意味着LaTeX应该尽量将图形放在该代码段所在的位置。（如果本页所剩的页面不够，这一参数将不起作用。）
+t：代表“top”，意味着图形应该放在页面的顶部。
+b：代表“bottom”，意味着图形应该放在页面的底部。
+p：代表“page of floats”，意味着图形应该单独放在一个浮动页面上，即一个只包含图形的页面。
+
+在table或者figure 后加 [!htb] 是系统忽略“美学”标准,把表格和图片插入到你的代码中，是动的,但是不加感叹号，它就是按顺序选择h(此处)，t(上方)，b(下方)，所以为了让图片随着你的代码移动，最好加一个[!htb]。
+
 
 
 
@@ -250,3 +261,4 @@ Excel2LaTex下载地址：https://www.ctan.org/tex-archive/support/excel2latex/
 > 1. https://zhuanlan.zhihu.com/p/645999650
 > 1. https://blog.csdn.net/qq_16763983/article/details/122912373
 > 1. https://blog.csdn.net/weixin_43981621/article/details/124246342
+> 1. https://blog.csdn.net/u013288190/article/details/121077095
